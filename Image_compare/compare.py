@@ -30,3 +30,4 @@ folder1 = "D:/rrr"
 review_folder = "D:/img_chk"
 
 compare_and_copy(folder1, folder2, review_folder)
+
