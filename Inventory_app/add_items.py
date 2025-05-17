@@ -49,4 +49,4 @@ add('food', 23.45, 65, 'burger.jpg')
 add('drink', 20.00, 120, 'soda.png')
 add('soap',30.12,45,'soap.jpg')
 add('paint',500.54,12,'paint.png')
-print(view())
+
