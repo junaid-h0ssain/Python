@@ -1,1 +1,26 @@
-{}
+[
+    {
+        "itemname": "food",
+        "itemprice": 23.45,
+        "itemcount": 65,
+        "itemimg": "burger.jpg"
+    },
+    {
+        "itemname": "drink",
+        "itemprice": 2.0,
+        "itemcount": 120,
+        "itemimg": "soda.png"
+    },
+    {
+        "itemname": "soap",
+        "itemprice": 30.12,
+        "itemcount": 45,
+        "itemimg": "soap.jpg"
+    },
+    {
+        "itemname": "paint",
+        "itemprice": 500.54,
+        "itemcount": 12,
+        "itemimg": "paint.png"
+    }
+]
