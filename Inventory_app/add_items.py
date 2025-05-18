@@ -20,14 +20,14 @@ def add(name:str, price:float, amount:int, image:str):
     for existing_item in items:
         if existing_item.get('itemname') == name:
             duplicate = True
-            print(f"Item '{name}' already exists in {db}. Not adding duplicate.")
-            break
+            return (f"Item '{name}' already exists in {db}. Not adding duplicate.")
+            
 
     if not duplicate:
         items.append(item)
         with open(db,'w') as file:
             json.dump(items,file,indent=4)
-        print(f"Item {item} saved to db successfully.")
+        return (f"Item {item} saved to db successfully.")
 
 def view():
     with open(db,'r') as file:
@@ -45,8 +45,8 @@ def view():
     return list
         
 
-add('food', 23.45, 65, 'burger.jpg')
-add('drink', 20.00, 120, 'soda.png')
-add('soap',30.12,45,'soap.jpg')
-add('paint',500.54,12,'paint.png')
+# add('food', 23.45, 65, 'burger.jpg')
+# add('drink', 20.00, 120, 'soda.png')
+# add('soap',30.12,45,'soap.jpg')
+# add('potato',500.54,12,'')
 
