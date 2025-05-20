@@ -43,6 +43,16 @@ def view():
         list +='---------------------------------------------------------------------------------------------\n'
 
     return list
+
+def view_name():
+    with open(db,'r') as file:
+        items=json.load(file)
+
+    list = ''
+    for item in items:
+        list = (f"{item['itemname']}")
+
+    return list
         
 
 # add('food', 23.45, 65, 'burger.jpg')

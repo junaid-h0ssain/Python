@@ -9,7 +9,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle('Inventory App')
-        self.setGeometry(600,300,800,600)
+        self.setGeometry(400,200,1000,800)
         self.setWindowIcon(QIcon('profile.png'))
         self.label = QLabel('Inventory App',self)
         self.button = QPushButton('View Inventory',self)
@@ -43,7 +43,7 @@ class MainWindow(QMainWindow):
         self.scroll_area = QScrollArea(self)
         self.scroll_area.setWidgetResizable(True)
         self.blabel.setStyleSheet('font-size:25px;')
-        self.blabel.setWordWrap(True)
+        #self.blabel.setWordWrap(True)
         self.scroll_area.setWidget(self.blabel)
 
         addformlayout = QGridLayout()
