@@ -50,7 +50,7 @@ def view_name():
 
     list = ''
     for item in items:
-        list = (f"{item['itemname']}")
+        list += (f"{item['itemname']} ")
 
     return list
         

@@ -28,12 +28,12 @@ class MainWindow(QMainWindow):
         table.addWidget(self.amount_item,0,2)
         table.addWidget(self.pic_item,0,3)
         items = []
+        i=1
+        j=0
         for item in range(4):
-            i=1
-            j=1
-            items[item] = QLabel(add_items.view_name(),self)
+            items.append(QLabel(add_items.view_name(),self))
             table.addWidget(items[item],i,j)
-            j = j+1
+            i = i+1
 
         mainLayout = QVBoxLayout()
         mainLayout.addLayout(table)
