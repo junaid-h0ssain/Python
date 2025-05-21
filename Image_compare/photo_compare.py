@@ -5,7 +5,7 @@ from collections import defaultdict
 import shutil
 
 FOLDERS = ["D:/EXIF_Correct","D:/Collection"]
-OUTPUT_DUPLICATES = "D:/Duplicates2"
+OUTPUT_DUPLICATES = ''
 os.makedirs(OUTPUT_DUPLICATES, exist_ok=True)
 
 hashes = defaultdict(list)
