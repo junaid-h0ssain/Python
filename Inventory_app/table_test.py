@@ -30,13 +30,21 @@ class MainWindow(QMainWindow):
         items = []
         i=1
         j=0
-        for item in range(4):
-            items.append(QLabel(add_items.view_name(),self))
-            table.addWidget(items[item],i,j)
+        for item in (add_items.view_name()):
+            label = QLabel(item,self)
+            label.setStyleSheet('font-size:25px;')
+            items.append(label)
+            # self.items[0].setStyleSheet('font-size:25px;')
+            table.addWidget(items[j],i,0,)
             i = i+1
+            j = j+1
 
+        self.scroll_area = QScrollArea(self)
+        self.scroll_area.setWidgetResizable(True)
+        self.scroll_area.setLayout(table)
         mainLayout = QVBoxLayout()
-        mainLayout.addLayout(table)
+        # mainLayout.addLayout(table)
+        mainLayout.addWidget(self.scroll_area)
 
         widget = QWidget()
         widget.setLayout(mainLayout)
