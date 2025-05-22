@@ -40,11 +40,51 @@ class MainWindow(QMainWindow):
         self.blabel = QLabel('hello',self)
         #self.blabel.setGeometry(100,220,800,400)
 
-        self.scroll_area = QScrollArea(self)
-        self.scroll_area.setWidgetResizable(True)
-        self.blabel.setStyleSheet('font-size:25px;')
-        #self.blabel.setWordWrap(True)
-        self.scroll_area.setWidget(self.blabel)
+        # self.scroll_area = QScrollArea(self)
+        # self.scroll_area.setWidgetResizable(True)
+        # self.blabel.setStyleSheet('font-size:25px;')
+        # #self.blabel.setWordWrap(True)
+        # self.scroll_area.setWidget(self.blabel)
+        
+        # new table add
+
+        self.scroll_widget = QWidget()
+
+        table = QGridLayout(self.scroll_widget)
+        self.name_item = QLabel('Name',self)
+        self.price_item = QLabel('Price',self)
+        self.amount_item = QLabel('Amount',self)
+        self.pic_item = QLabel('Image',self)
+
+        self.name_item.setStyleSheet('font-size:35px;')
+        self.price_item.setStyleSheet('font-size:35px;')
+        self.amount_item.setStyleSheet('font-size:35px;')
+        self.pic_item.setStyleSheet('font-size:35px;')
+
+        table.addWidget(self.name_item,0,0)
+        table.addWidget(self.price_item,0,1)
+        table.addWidget(self.amount_item,0,2)
+        table.addWidget(self.pic_item,0,3)
+
+        def table_items(array,pos):
+            items = []
+            i=2
+            j=0
+            for item in (array):
+                label = QLabel(item,self)
+                label.setStyleSheet('font-size:25px;')
+                items.append(label)
+                # self.items[0].setStyleSheet('font-size:25px;')
+                table.addWidget(items[j],i,pos,)
+                i = i+1
+                j = j+1
+
+        table_items(add_items.view_name(),0)
+        table_items(add_items.view_price(),1)
+        table_items(add_items.view_amount(),2)
+        table_items(add_items.view_img(),3)
+
+        # table end
 
         addformlayout = QGridLayout()
         #self.textbox.setGeometry(100,100,200,100)
@@ -74,7 +114,7 @@ class MainWindow(QMainWindow):
         mainLayout = QVBoxLayout()
         mainLayout.addWidget(self.label)
         mainLayout.addLayout(viewButtonLayout)
-        mainLayout.addWidget(self.scroll_area)
+        mainLayout.addWidget(self.scroll_widget)
         mainLayout.addLayout(addformlayout)
 
         widget = QWidget()
