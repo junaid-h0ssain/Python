@@ -34,6 +34,7 @@ class MainWindow(QMainWindow):
 
         #self.button.setGeometry(400,100,300,100)
         self.button.setStyleSheet('font-size:30px;')
+        inv = False
         self.button.clicked.connect(self.onclick)
         self.hello_label = QLabel('Hello',self)
         self.hello_label.setStyleSheet('font-size:55px;')
@@ -119,8 +120,9 @@ class MainWindow(QMainWindow):
         widget.setLayout(mainLayout)
         self.setCentralWidget(widget)
 
-    def onclick(self):
+    def onclick(self,inv):
         self.scroll_area.setWidget(self.scroll_widget)
+        inv = True
         #self.button.setDisabled(True)
 
     def submit(self):
@@ -153,5 +155,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-    is_inv_view = False
     
