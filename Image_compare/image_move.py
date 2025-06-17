@@ -17,7 +17,8 @@ def copy_images(source_folder, destination_folder):
         os.makedirs(destination_folder)
         print(f"Destination folder '{destination_folder}' created.")
 
-    image_extensions = ('.jpg', '.jpeg', '.png', '.gif', '.bmp', '.tiff', '.webp')
+    # image_extensions = ('.jpg', '.jpeg', '.png', '.gif', '.bmp', '.tiff', '.webp')
+    image_extensions = ('.mp4','.mkv','.webm')
 
     copied_count = 0
     for filename in os.listdir(source_folder):
@@ -40,7 +41,7 @@ if __name__ == "__main__":
     # --- Configuration ---
     # IMPORTANT: Replace these paths with your actual source and destination folders
     source_directory = 'D:/EXIF_Correct'  # e.g., "C:/Users/YourUser/Pictures"
-    destination_directory = "C:/Users/junu/Pictures/pics" # e.g., "C:/Users/YourUser/MyCopiedImages"
+    destination_directory = "C:/Users/junu/Pictures/vids" # e.g., "C:/Users/YourUser/MyCopiedImages"
     # -------------------
 
     # --- Example Usage (Uncomment to run with example paths) ---
